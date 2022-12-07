@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# VSCode
+/.vscode
+.vscode/
+
+# App data
+*.config
+*.xml
+*.json
+*.txt
+
+# Service
+/cmake-build-debug
+cmake-build-debug/
+/.idea
+.idea/
