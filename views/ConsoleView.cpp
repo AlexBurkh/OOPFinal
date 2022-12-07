@@ -14,7 +14,7 @@ std::string ConsoleView::ReadLine()
 {
     std::string input = "";
     while (input == "") {
-        std::cin >> input;
+        std::getline(std::cin, input);
     }
     return input;
 }
@@ -22,8 +22,6 @@ std::string ConsoleView::ReadLine()
 char ConsoleView::Read()
 {
     char input = ' ';
-    while (input == ' ') {
-        std::cin >> input;
-    }
+    std::cin >> input;
     return input;
 }

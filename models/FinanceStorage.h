@@ -10,11 +10,9 @@ class FinanceStorage
         std::string Comment;
         double Balance;
 
-        // Methods
+    public:
         bool Add(double amount);
         double Get(double amount);
-
-    public:
         /// @brief Выполняет перевод средств из текущего объекта в переданный по указателю
         /// @param amound Сумма средств для перевода
         /// @param dst Счет - адресат для перевода
@@ -32,6 +30,9 @@ class FinanceStorage
         /// @brief Текстовое представление объекта
         /// @return Возвращает представление типа std::string
         virtual std::string ToString();
+        /// @brief Возвращает текущий баланс
+        /// @return Текущий баланс
+        double GetBalance();
 };
 
 /// @brief Проверяет ли текущий объект экземляром класса, переданного в шаблонном параметре

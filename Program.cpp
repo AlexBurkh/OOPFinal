@@ -1,7 +1,7 @@
 #include "models/BankCard.h"
 #include "models/Envelope.h"
 #include "views/ConsoleView.h"
-#include "views/Ui.h"
+#include "presenter/Presenter.h"
 #include "models/EFinanceStorageType.h"
 #include "exceptions/WrongCardNumberException.h"
 
@@ -34,9 +34,8 @@ void TestModels()
 }
 void TestUI()
 {
-    Ui* ui = new Ui(new ConsoleView());
+    Presenter* ui = new Presenter(new ConsoleView(), new std::vector<FinanceStorage*>());
     ui->Start();
-
     delete(ui);
 }
 

@@ -45,3 +45,8 @@ bool FinanceStorage::Refill(double amount, FinanceStorage* src)
     }
     return false;
 }
+
+double FinanceStorage::GetBalance()
+{
+    return Balance;
+}
